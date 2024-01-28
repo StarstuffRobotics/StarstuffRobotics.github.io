@@ -55,11 +55,45 @@
             font-size: 18px;
             text-decoration: none;
         }
-        @media screen and (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+
+        /* Additional styles for the homepage */
+        .homepage-image {
+            width: 100%; /* Adjust as needed */
+            height: auto;
+        }
+
+        .robot-section {
+            margin-top: 20px;
+        }
+
+        .team-history {
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #525252;
+            color: #84b4d4;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #84b4d4;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .contact-button {
+            padding: 5px 10px;
+            background-color: #84b4d4;
+            color: #525252;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -69,14 +103,40 @@
             <a href="/index.html"><img src="/Image-Assets/Copy-of-STARSTUFF-Robotics-Logo-Basic-2023-24.png"></a>
         </div>
         <ul class="navbar-list">
+            <li><a href="/index.html">Home</a></li>
             <li><a href="Outreach/Outreach.html">Outreach</a></li>
-            <li><a href="Members/memberlist.html">Members</a></li>
-            <li><a href="SocialMedia/media.html">Media</a></li>
-            <li><a href="Documentation/docs.html">Documentation</a></li>
-            <li><a href="Resources/recources.html">Resources</a></li>
-            <li><a href="Resources/schedule.html">Schedule</a></li>
-            <li><a href="Resources/scouting.html">Scouting</a></li>
+            <!-- Add other navigation links as needed -->
         </ul>
     </nav>
+
+    <img class="homepage-image" src="path/to/your/team/image.jpg" alt="Starstuff Robotics Team">
+
+    <div class="robot-section">
+        <h2>Our Robots</h2>
+        <div>
+            <img src="path/to/robot/image.jpg" alt="Crescendo Robot">
+            <h3>Crescendo</h3>
+            <p>Game: FRC Game Name</p>
+            <ul>
+                <li>Bullet point 1</li>
+                <li>Bullet point 2</li>
+                <!-- Add more bullet points as needed -->
+            </ul>
+        </div>
+        <!-- Add more robot sections as needed -->
+    </div>
+
+    <div class="team-history">
+        <h2>Team History</h2>
+        <!-- Add your team history content here -->
+    </div>
+
+    <div class="footer">
+        <a href="https://github.com/your-team" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/your-team/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/user/your-team" target="_blank">YouTube</a>
+        <a href="https://www.firstinspires.org/robotics/frc" target="_blank">FIRST Robotics</a>
+        <button class="contact-button">Contact</button>
+    </div>
 </body>
 </html>
