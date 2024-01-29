@@ -9,15 +9,80 @@
 </head>
 
 <body>
-    <script>
-        // Use Fetch API to load the navbar HTML
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                // Insert the navbar HTML into the container
-                document.getElementById('navbar').innerHTML = html;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            background-color: #525252;
+            font-family: Arial, Helvetica, sans-serif; 
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 75px;
+            max-width: 75px; 
+            margin-right: 15px;
+        }
+
+        .navbar-list {
+            background-color: #525252;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .navbar-list li {
+            margin-right: 25px;
+        }
+
+        .navbar-list a {
+            color: #84b4d4;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/Image-Assets/Copy-of-STARSTUFF-Robotics-Logo-Basic-2023-24.png"></a>
+        </div>
+        <ul class="navbar-list">
+            <li><a href="Outreach/Outreach.html">Outreach</a></li>
+            <li><a href="Members/memberlist.html">Members</a></li>
+            <li><a href="SocialMedia/media.html">Media</a></li>
+            <li><a href="Documentation/docs.html">Documentation</a></li>
+            <li><a href="Resources/recources.html">Resources</a></li>
+            <li><a href="Resources/schedule.html">Schedule</a></li>
+            <li><a href="Resources/scouting.html">Scouting</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
