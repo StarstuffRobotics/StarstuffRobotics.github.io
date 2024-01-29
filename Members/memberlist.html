@@ -8,40 +8,84 @@
         <link rel="icon" href="/Image-Assets/Copy-of-STARSTUFF-Robotics-Logo-Basic-2023-24.png" type="image/x-icon">
     </head>
     <body>
+        <!--Navbar Styling and HTML, Iframe and Javascript wern't fast enough.-->
         <style>
-            body {
-                font-family: Arial, sans-serif;
+            * {
+                box-sizing: border-box;
                 margin: 0;
-                padding: 20px;
-                background-color: #f4f4f4;
+                padding: 0;
             }
     
-            .grid-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
             }
     
-            .contact-card {
-                background-color: #ffffff;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                padding: 20px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            .navbar {
+                background-color: #525252;
+                font-family: Arial, Helvetica, sans-serif; 
+                padding: 10px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
     
-            .contact-card h3 {
-                margin-top: 0;
+            .logo img {
+                max-height: 75px;
+                max-width: 75px; 
+                margin-right: 15px;
             }
     
-            .contact-card p {
-                margin-bottom: 10px;
+            .navbar-list {
+                background-color: #525252;
+                padding: 10px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                margin-top: 15px;
+            }
+    
+            .navbar-list li {
+                margin-right: 25px;
+            }
+    
+            .navbar-list a {
+                color: #84b4d4;
+                font-size: 18px;
+                text-decoration: none;
+            }
+            @media screen and (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
             }
         </style>
+    </head>
+    
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/Image-Assets/Copy-of-STARSTUFF-Robotics-Logo-Basic-2023-24.png"></a>
+            </div>
+            <ul class="navbar-list">
+                <li><a href="Outreach/Outreach.html">Outreach</a></li>
+                <li><a href="Members/memberlist.html">Members</a></li>
+                <li><a href="SocialMedia/media.html">Media</a></li>
+                <li><a href="Documentation/docs.html">Documentation</a></li>
+                <li><a href="Resources/recources.html">Resources</a></li>
+                <li><a href="Resources/schedule.html">Schedule</a></li>
+                <li><a href="Resources/scouting.html">Scouting</a></li>
+            </ul>
+        </nav>
         <div class="grid-container">
             <div class="contact-card">
                 <h3>John Doe</h3>
-                <p>Email: john.doe@example.com</p>
+                <p>Participation: </p>
                 <p>Coach</p>
             </div>
         </div>
