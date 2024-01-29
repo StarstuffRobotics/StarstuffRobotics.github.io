@@ -6,10 +6,18 @@
     <title>Starstuff Robotics</title>
     <link rel="stylesheet" href="homepage/index.css">
     <link rel="icon" href="/Image-Assets/Copy-of-STARSTUFF-Robotics-Logo-Basic-2023-24.png" type="image/x-icon">
-    <iframe src="Image-Assets/navbar.html" frameborder="0" width="100%" height="100"></iframe>
 </head>
 
 <body>
-
+    <script>
+        // Use Fetch API to load the navbar HTML
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                // Insert the navbar HTML into the container
+                document.getElementById('navbar').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 </body>
 </html>
