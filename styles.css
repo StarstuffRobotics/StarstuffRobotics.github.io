@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #475772;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,4 +53,9 @@ body {
         margin-right: 0;
         margin-bottom: 10px;
     }
+}
+.logo h2{
+    align-content: center;
+    vertical-align: auto;
+    text-decoration: none;
 }
