@@ -9,7 +9,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-RML392X4R5');
+    gtag('config', 'G-RML392X4R5', {
+      'transport_url': 'https://www.google-analytics.com/collect',
+      'custom_map': {'dimension1': 'geo_country'}
+    });
 
     // Redirect to the Canva website after Google Analytics is loaded
     setTimeout(function() {
