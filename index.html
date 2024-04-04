@@ -2,6 +2,49 @@
 <html>
 <head>
   <title>Redirecting...</title>
+ <script> function logToGoogleSheet(ipAddress, timestamp, browser, userAgent) {
+  fetch(`https://script.google.com/a/macros/sssas.org/s/AKfycbwe1SLWhRO2befIT4Y8ZwZd6e0AljSSQS0CqwXD2ilPUCCb9mq2tuxuts0nYiUjMuRAuQ/exec?timestamp=${timestamp}&browser=${browser}&userAgent=${userAgent}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ ip: ipAddress })
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to log data');
+      }
+      console.log('Data logged successfully');
+    })
+    .catch(error => {
+      console.error('Error logging data:', error);
+    });
+}
+
+function captureUserDataAndLog() {
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      const ipAddress = data.ip;
+      const timestamp = new Date().toISOString();
+      const browser = navigator.appName;
+      const userAgent = navigator.userAgent;
+
+      console.log('User Agent:', userAgent);
+      console.log('Timestamp:', timestamp);
+      console.log('Browser:', browser);
+      console.log('IP Address:', ipAddress);
+
+      logToGoogleSheet(ipAddress, timestamp, browser, userAgent);
+    })
+    .catch(error => {
+      console.error('Error fetching IP address:', error);
+    });
+}
+
+// Example usage
+captureUserDataAndLog();
+ </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RML392X4R5"></script>
   <script>
