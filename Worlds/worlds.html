@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="worlds.css">
-    <title>FRC Championship Bound!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Starstuff Robotics</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        .navbar {
+            background-color: #525252;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+            padding-right: 10px;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #84b4d4;
+        }
+
+        .search-box {
+            margin-right: 10px;
+        }
+
+        .profile-picture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img src="path_to_your_logo.png" alt="Logo" height="40"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Outreach</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Documentation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Starscout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sponsors</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-    </header>
-    <main>
-        <section>
-            <h2>Our Journey</h2>
-            <p>Join us as we embark on an incredible journey to the FIRST Robotics Championship. Our team has worked tirelessly, overcoming challenges and pushing the limits of innovation, to earn our place among the best in the world.</p>
-        </section>
-        <section>
-            <h2>Join Our Team</h2>
-            <p>If you're inspired by our journey and want to be part of our team's success, we're always looking for passionate individuals to join us. Whether you're interested in engineering, programming, or business, there's a place for you on our championship-bound team.</p>
-        </section>
-        <section>
-            <h2>Celebrate With Us</h2>
-            <p>Help us celebrate our achievement and support us as we prepare for the Championship. Follow us on social media for updates and behind-the-scenes looks at our journey to the top.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; [Your Team Name] - [Your City, State]. All rights reserved.</p>
-    </footer>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/path/to/logo.png" alt="Logo">
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search">
+                <img class="profile-picture" src="/path/to/profile-pic.png" alt="Profile Picture">
+            </form>
+        </div>
+    </nav>
 
+    <!-- Bootstrap JS, Popper.js, and jQuery (for Bootstrap functionality) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
