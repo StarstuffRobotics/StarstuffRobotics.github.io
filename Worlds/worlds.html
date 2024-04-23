@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Starstuff Robotics</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Custom styles */
         .navbar {
-            background-color: #525252;
+            background-color: #333333; /* RGB: 51, 51, 51 */
+            font-family: 'Barlow', sans-serif;
         }
 
         .navbar-brand img {
@@ -23,20 +25,25 @@
         .navbar-nav .nav-link {
             padding: 10px;
             color: #ffffff;
+            text-decoration: none; /* Remove underline from links */
         }
 
         .navbar-nav .nav-link:hover {
-            background-color: #84b4d4;
+            background-color: transparent; /* Remove background color on hover */
         }
 
         .search-box {
             margin-right: 10px;
+            border-radius: 20px; /* Adjust the border radius as needed */
         }
 
-        .profile-picture {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+        .login-button {
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue color for the button */
+            color: #ffffff;
+            border: none;
+            border-radius: 20px; /* Adjust the border radius as needed */
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -57,18 +64,37 @@
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Placeholder</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Placeholder 5</a></li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search">
-                <img class="profile-picture" src="/path/to/profile-pic.png" alt="Profile Picture">
+                <button class="btn btn-outline-success my-2 my-sm-0 login-button" type="submit">Log In</button>
             </form>
         </div>
     </nav>
+    <!--Team Banner Image, this is to be replaced year after year-->
+    <div id="bannerimage"></div>
+   <style>#bannerimage {
+    width: 100%;
+    background-image: url(https://drive.google.com/file/d/11FaCYxW03pk9cwAgIpFIM6bavL4dj6va/view?usp=sharing);
+    height: 405px;
+    background-position: center;
+   }
+    </style> 
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2024 Starstuff Robotics. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS, Popper.js, and jQuery (for Bootstrap functionality) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
