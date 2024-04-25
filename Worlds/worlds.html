@@ -76,16 +76,48 @@
             </form>
         </div>
     </nav>
-    <!--Team Banner Image, this is to be replaced year after year-->
-    <div id="bannerimage"></div>
-   <style>#bannerimage {
+    <!--Team Banner Image, this is to be replaced year after year-->       
+        <div class="banner">
+            <img src="/DCMP0RAS-AWARD.jpeg" alt="Banner Image">
+        </div>
+        <style>
+            .banner {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.banner img {
     width: 100%;
-    background-image: url(https://drive.google.com/file/d/11FaCYxW03pk9cwAgIpFIM6bavL4dj6va/view?usp=sharing);
-    height: 405px;
-    background-position: center;
-   }
-    </style> 
-    
+    height: auto;
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.banner-text p {
+    font-size: 1.5em;
+}
+ </style>
+ <p class="Team Info">
+Starstuff Robotics #9403 is a FIRST®
+Robotics Competition (FRC) team in Alexandria, Virginia. 
+Our team name is from Carl Sagan when he said “Everything is made of Starstuff.” 
+The basis for our team is that we are inclusive and all are welcome. 
+Our team follows FIRST core values and actively demonstrates Gracious Professionalism®.
+ </p>
+    <!--All Code must go above this note in order for the Footer to work-->
     <footer class="footer">
         <div class="container">
             <div class="row">
