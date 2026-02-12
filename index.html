@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starstuff Robotics | Portfolios</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #111111;
+            --accent-glow: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-weight: 200;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* The Grid System */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            display: grid;
+            /* Creates a 2-column grid on desktop, 1-column on mobile */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            justify-content: center;
+        }
+
+        /* The Card Design */
+        .canva-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            /* This maintains the vertical aspect ratio */
+            padding-top: 133.33%; 
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .canva-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
+        }
+
+        .canva-card iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .caption {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #888;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .caption:hover {
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Starstuff Starsets</h1>
+
+    <div class="container">
+        
+        <div class="card-container">
+            <div class="canva-card">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAGDQJMCMBU/qk-i2-WGol2aYZEgt0GMhg/view?embed" allowfullscreen></iframe>
+            </div>
+            <a class="caption" href="https://www.canva.com/design/DAGDQJMCMBU/qk-i2-WGol2aYZEgt0GMhg/view" target="_blank">Outreach Portfolio</a>
+        </div>
+
+        <div class="card-container">
+            <div class="canva-card">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAG9mk7pixQ/VWEAv2ZDLBGWr9f4xYBn1Q/view?embed" allowfullscreen></iframe>
+            </div>
+            <a class="caption" href="https://www.canva.com/design/DAG9mk7pixQ/VWEAv2ZDLBGWr9f4xYBn1Q/view" target="_blank">Brand Standards</a>
+        </div>
+
+        <div class="card-container">
+            <div class="canva-card">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAGffRL57SQ/3v_kRTJAVSjxR0yfPR-CvA/view?embed" allowfullscreen></iframe>
+            </div>
+            <a class="caption" href="https://www.canva.com/design/DAGffRL57SQ/3v_kRTJAVSjxR0yfPR-CvA/view" target="_blank">2025 Portfolio</a>
+        </div>
+
+        <div class="card-container">
+            <div class="canva-card">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAGV5YkuvGs/rduejJSTXMxRbswlphye-g/view?embed" allowfullscreen></iframe>
+            </div>
+            <a class="caption" href="https://www.canva.com/design/DAGV5YkuvGs/rduejJSTXMxRbswlphye-g/view" target="_blank">2024 Portfolio</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
