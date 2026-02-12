@@ -8,66 +8,67 @@
         :root {
             --bg-color: #000000;
             --card-bg: #111111;
-            --accent-glow: rgba(255, 255, 255, 0.1);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --accent: #ffffff;
+            --text-dim: #888888;
+            --radius: 14px;
         }
 
         body {
             background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 50px 50px;
             color: white;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
         }
 
         h1 {
-            margin-bottom: 40px;
             font-weight: 200;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            color: #ffffff;
+            margin-bottom: 60px;
             text-align: center;
+            font-size: 1.8rem;
         }
 
-        /* The Grid System */
-        .container {
+        .portfolio-grid {
+            display: grid;
             width: 100%;
             max-width: 1400px;
-            display: grid;
-            /* Creates a 2-column grid on desktop, 1-column on mobile */
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            /* Reactive grid: adapts columns based on screen width */
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 50px 30px;
             justify-content: center;
         }
 
-        /* The Card Design */
-        .canva-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
+        .item-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .canva-frame {
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-            /* This maintains the vertical aspect ratio */
+            width: 100%;
             padding-top: 133.33%; 
-            animation: fadeIn 0.8s ease forwards;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .canva-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
+        .canva-frame:hover {
+            transform: scale(1.02);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
 
-        .canva-card iframe {
+        .canva-frame iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -76,28 +77,21 @@
             border: none;
         }
 
-        .caption {
-            margin-top: 12px;
-            font-size: 0.85rem;
-            color: #888;
-            text-align: center;
+        .label {
+            color: var(--text-dim);
             text-decoration: none;
-            display: block;
-            transition: var(--transition);
+            font-size: 0.85rem;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
 
-        .caption:hover {
-            color: #fff;
+        .label:hover {
+            color: var(--accent);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .container {
+        @media (max-width: 450px) {
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -107,34 +101,41 @@
 
     <h1>Starstuff Starsets</h1>
 
-    <div class="container">
-        
-        <div class="card-container">
-            <div class="canva-card">
-                <iframe loading="lazy" src="https://www.canva.com/design/DAGDQJMCMBU/qk-i2-WGol2aYZEgt0GMhg/view?embed" allowfullscreen></iframe>
+    <div class="portfolio-grid">
+
+        <div class="item-group">
+            <div class="canva-frame">
+                <iframe src="https://www.canva.com/design/DAGg5dSDKRo/msaYDfhVs1xwePmAUze2mA/view?embed" allowfullscreen></iframe>
             </div>
-            <a class="caption" href="https://www.canva.com/design/DAGDQJMCMBU/qk-i2-WGol2aYZEgt0GMhg/view" target="_blank">Outreach Portfolio</a>
+            <a class="label" href="https://www.canva.com/design/DAGg5dSDKRo/msaYDfhVs1xwePmAUze2mA/view" target="_blank">STEM Tutoring Lesson Plans</a>
         </div>
 
-        <div class="card-container">
-            <div class="canva-card">
-                <iframe loading="lazy" src="https://www.canva.com/design/DAG9mk7pixQ/VWEAv2ZDLBGWr9f4xYBn1Q/view?embed" allowfullscreen></iframe>
+        <div class="item-group">
+            <div class="canva-frame">
+                <iframe src="https://www.canva.com/design/DAGDQJMCMBU/qk-i2-WGol2aYZEgt0GMhg/view?embed" allowfullscreen></iframe>
             </div>
-            <a class="caption" href="https://www.canva.com/design/DAG9mk7pixQ/VWEAv2ZDLBGWr9f4xYBn1Q/view" target="_blank">Brand Standards</a>
+            <a class="label" href="https://www.canva.com/design/DAGDQJMCMBU/qk-i2-WGol2aYZEgt0GMhg/view" target="_blank">Outreach Portfolio</a>
         </div>
 
-        <div class="card-container">
-            <div class="canva-card">
-                <iframe loading="lazy" src="https://www.canva.com/design/DAGffRL57SQ/3v_kRTJAVSjxR0yfPR-CvA/view?embed" allowfullscreen></iframe>
+        <div class="item-group">
+            <div class="canva-frame">
+                <iframe src="https://www.canva.com/design/DAG9mk7pixQ/VWEAv2ZDLBGWr9f4xYBn1Q/view?embed" allowfullscreen></iframe>
             </div>
-            <a class="caption" href="https://www.canva.com/design/DAGffRL57SQ/3v_kRTJAVSjxR0yfPR-CvA/view" target="_blank">2025 Portfolio</a>
+            <a class="label" href="https://www.canva.com/design/DAG9mk7pixQ/VWEAv2ZDLBGWr9f4xYBn1Q/view" target="_blank">Brand Standards</a>
         </div>
 
-        <div class="card-container">
-            <div class="canva-card">
-                <iframe loading="lazy" src="https://www.canva.com/design/DAGV5YkuvGs/rduejJSTXMxRbswlphye-g/view?embed" allowfullscreen></iframe>
+        <div class="item-group">
+            <div class="canva-frame">
+                <iframe src="https://www.canva.com/design/DAGffRL57SQ/3v_kRTJAVSjxR0yfPR-CvA/view?embed" allowfullscreen></iframe>
             </div>
-            <a class="caption" href="https://www.canva.com/design/DAGV5YkuvGs/rduejJSTXMxRbswlphye-g/view" target="_blank">2024 Portfolio</a>
+            <a class="label" href="https://www.canva.com/design/DAGffRL57SQ/3v_kRTJAVSjxR0yfPR-CvA/view" target="_blank">2025 Portfolio</a>
+        </div>
+
+        <div class="item-group">
+            <div class="canva-frame">
+                <iframe src="https://www.canva.com/design/DAGV5YkuvGs/rduejJSTXMxRbswlphye-g/view?embed" allowfullscreen></iframe>
+            </div>
+            <a class="label" href="https://www.canva.com/design/DAGV5YkuvGs/rduejJSTXMxRbswlphye-g/view" target="_blank">2024 Portfolio</a>
         </div>
 
     </div>
